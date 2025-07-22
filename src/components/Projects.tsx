@@ -59,11 +59,11 @@ const Projects = () => {
   const otherProjects = projects.filter(project => !project.featured);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white to-neutral-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 relative overflow-hidden transition-colors duration-500">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-32 right-10 w-72 h-72 bg-accent-teal/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-32 left-10 w-72 h-72 bg-primary-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-32 right-10 w-72 h-72 bg-accent-teal/5 dark:bg-accent-teal/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-10 w-72 h-72 bg-primary-blue/5 dark:bg-primary-blue/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -83,7 +83,7 @@ const Projects = () => {
             {featuredProjects.map((project, index) => (
               <Card 
                 key={project.id}
-                className="group overflow-hidden bg-white/80 backdrop-blur-sm border border-white/20 shadow-soft hover:shadow-large transition-all duration-500 hover:scale-[1.02] animate-scale-in"
+                className="group overflow-hidden bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-large transition-all duration-500 hover:scale-[1.02] animate-scale-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -166,7 +166,7 @@ const Projects = () => {
               {otherProjects.map((project, index) => (
                 <Card 
                   key={project.id}
-                  className="group overflow-hidden bg-white/80 backdrop-blur-sm border border-white/20 shadow-soft hover:shadow-medium transition-all duration-500 hover:scale-[1.02] animate-fade-up"
+                  className="group overflow-hidden bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-500 hover:scale-[1.02] animate-fade-up"
                   style={{ animationDelay: `${(featuredProjects.length + index) * 0.1}s` }}
                 >
                   <div className="relative overflow-hidden">

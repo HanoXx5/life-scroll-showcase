@@ -27,11 +27,11 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-neutral-50 to-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800 relative overflow-hidden transition-colors duration-500">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-primary-blue/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-accent-purple/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-64 h-64 bg-primary-blue/5 dark:bg-primary-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-accent-purple/5 dark:bg-accent-purple/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -57,7 +57,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border border-white/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <Card className="p-6 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Mail className="w-6 h-6 text-white" />
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border border-white/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <Card className="p-6 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-accent-teal rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Phone className="w-6 h-6 text-white" />
@@ -81,7 +81,7 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-white/80 backdrop-blur-sm border border-white/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <Card className="p-6 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-accent-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <MapPin className="w-6 h-6 text-white" />
@@ -113,7 +113,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <Card className="p-8 bg-white/80 backdrop-blur-sm border border-white/20 shadow-soft hover:shadow-medium transition-all duration-300">
+            <Card className="p-8 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-300">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">Schreib mir eine Nachricht</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">

@@ -125,6 +125,28 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Dark mode specific colors */
+    --neutral-50: 0 0% 95%;
+    --neutral-100: 0 0% 90%;
+    --neutral-200: 0 0% 80%;
+    --neutral-800: 0 0% 15%;
+    --neutral-900: 0 0% 8%;
+    
+    /* Dark glass effects */
+    --glass-bg: 0 0% 0% / 0.2;
+    --glass-border: 0 0% 100% / 0.1;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-blue)), hsl(var(--accent-purple)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--glass-bg)), hsl(0 0% 0% / 0.1));
+    --gradient-text: linear-gradient(135deg, hsl(var(--primary-blue-light)), hsl(var(--accent-teal)));
+    
+    /* Dark shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-medium: 0 10px 25px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.15);
+    --shadow-large: 0 25px 50px -12px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--primary-blue) / 0.4);
   }
 }
 
