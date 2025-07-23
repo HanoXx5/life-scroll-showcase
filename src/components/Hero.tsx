@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ExternalLink, Heart, Coffee, Music, Camera, MapPin, Briefcase, GraduationCap, Sparkles, Code, Zap } from "lucide-react";
-import "animate.css"
+import "animate.css";
+
 
 const Hero = () => {
   return (
@@ -80,7 +81,7 @@ const Hero = () => {
                 </div>
 
                 {/* Tall Card - right side */}
-                <div className="col-span-1 row-span-2 col-start-5 row-start-1 bg-gradient-to-b from-red-400/20 to-pink-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__slower">
+                <div className="col-span-1 row-span-2 col-start-5 row-start-2 bg-gradient-to-b from-red-400/20 to-pink-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__slower">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-4">
                     <div>
                     </div>
@@ -94,11 +95,11 @@ const Hero = () => {
 
                 {/* Code decoration - far right */}
                 <div className="col-span-1 row-span-1 col-start-6 row-start-2 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInRightBig animate__delay-2s animate__slow">
-                  <Code className="w-6 h-6 text-white" />
+                  <Coffee className="w-6 h-6 text-white" />
                 </div>
 
                 {/* University Card - repositioned */}
-                <div className="col-span-2 row-span-1 col-start-5 row-start-4 relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInRight animate__slow">
+                <div className="col-span-3 row-span-1 col-start-4 row-start-4 relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInRight animate__slow">
                   <div className="flex items-center justify-center h-full space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <GraduationCap className="w-6 h-6 text-white" />
@@ -126,7 +127,7 @@ const Hero = () => {
                 </div>
 
                 {/* Energy/Lightning decoration */}
-                <div className="col-span-1 row-span-1 col-start-1 row-start-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInLeft animate__delay-3s">
+                <div className="col-span-1 row-span-2 col-start-1 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInLeft animate__delay-3s">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
@@ -137,12 +138,12 @@ const Hero = () => {
                   href="https://nachhilfe-langen-egelsbach.de/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="col-span-1 row-span-1 col-start-4 row-start-5"
+                  className="col-span-2 row-span-1 col-start-5 row-start-1"
                 >
-                <div className="col-span-1 row-span-1 col-start-4 row-start-5 bg-gradient-to-br from-green-400/20 to-emerald-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInUp animate__delay-2s" >
+                <div className="col-span-1 row-span-1 col-start-4 row-start-5 bg-gradient-to-br from-green-400/20 to-emerald-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__delay-2s" >
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
                                       <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
-                                        <ExternalLink></ExternalLink>
+                                        <ExternalLink className="text-white"></ExternalLink>
                                       </div>
                                       <div>
                                         <div className="font-bold text-neutral-800 dark:text-neutral-200 text-xs">Mathe</div>
@@ -153,13 +154,13 @@ const Hero = () => {
                 </div>
                    </a>
 
-                {/* Small coffee decoration */}
+                {/* Small code decoration */}
                 <div className="col-span-1 row-span-1 col-start-1 row-start-5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__rotateInUpRight animate__delay-1s flex items-center justify-center">
-                  <Coffee className="w-6 h-6 text-white" />
+                  <Code className="w-6 h-6 text-white" />
                 </div>
 
                 {/* Wirtschaftsinformatik badge - floating */}
-                <div className="col-span-2 row-span-1 col-start-5 row-start-5 bg-gradient-to-r from-teal-400/20 to-cyan-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInUpBig animate__slow">
+                <div className="col-span-3 row-span-1 col-start-4 row-start-5 bg-gradient-to-r from-teal-400/20 to-cyan-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInUpBig animate__slow">
                   <div className="flex items-center justify-center h-full space-x-6">
 
                     <div className="text-center flex flex-col items-center space-y-1">
