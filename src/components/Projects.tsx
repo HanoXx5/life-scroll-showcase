@@ -62,8 +62,8 @@ const Projects = () => {
     <section className="py-20 bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 relative overflow-hidden transition-colors duration-500">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-32 right-10 w-72 h-72 bg-accent-teal/5 dark:bg-accent-teal/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-32 left-10 w-72 h-72 bg-primary-blue/5 dark:bg-primary-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-32 right-10 w-72 h-72 bg-accent-teal/10 dark:bg-accent-teal/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-10 w-72 h-72 bg-primary-blue/50 dark:bg-primary-blue/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -71,14 +71,14 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Meine <span className="bg-gradient-text bg-clip-text text-transparent">Projekte</span>
           </h2>
-          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
             Eine Auswahl meiner neuesten Arbeiten und Projekte, die meine Fähigkeiten und Leidenschaft für Entwicklung zeigen
           </p>
         </div>
 
         {/* Featured Projects */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-neutral-800 mb-8 text-center">Featured Projekte</h3>
+          <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-300 mb-8 text-center">Featured Projekte</h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {featuredProjects.map((project, index) => (
               <Card 
@@ -96,7 +96,7 @@ const Projects = () => {
                   
                   {/* Category badge */}
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-white/90 text-neutral-800 border-0 shadow-soft">
+                    <Badge className="bg-white/90 text-neutral-800  border-0 shadow-soft">
                       {project.category}
                     </Badge>
                   </div>
@@ -119,10 +119,10 @@ const Projects = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h4 className="text-xl font-bold text-neutral-800 mb-2 group-hover:text-primary-blue transition-colors duration-300">
+                  <h4 className="text-xl font-bold text-neutral-800 dark:text-neutral-300 mb-2 group-hover:text-primary-blue transition-colors duration-300">
                     {project.title}
                   </h4>
-                  <p className="text-neutral-600 mb-4 leading-relaxed">
+                  <p className="text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   

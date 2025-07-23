@@ -2,23 +2,35 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ExternalLink, Heart, Coffee, Music, Camera, MapPin, Briefcase, GraduationCap, Sparkles, Code, Zap } from "lucide-react";
 import "animate.css";
-
+import { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(() => {
+    // Particles.js initialisieren
+    if (window.particlesJS) {
+      window.particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    }
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-neutral-50 via-white to-neutral-100 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 transition-colors duration-500">
+      {/* Particles.js Container */}
+      <div id="particles-js" className="absolute inset-0 z-0"></div>
+
       {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-xl opacity-20 animate-pulse"></div>
+      <div className="absolute inset-0 overflow-hidden z-10">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-xl opacity-20 animate-pulse"style={{ animationDelay: '2s' }}></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl opacity-10 animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
-          <div className="space-y-8 animate__animated animate__fadeInDown animate__slow">
-            <div>
+          <div className="space-y-8 animate__animated animate__fadeInDown animate__slow relative">
+
+            <div className="relative z-10">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
                 Hi, ich bin{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -33,20 +45,19 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 relative z-10">
               <Button size="lg" className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 Erfahren sie mehr
               </Button>
                 <Button size="lg" className="group hover:bg-blue-50 hover:border-blue-400 dark:hover:bg-blue-950 transition-all duration-300 ">
                  Meine Projekte
                </Button>
-
             </div>
           </div>
 
           {/* Right content - Asymmetric Grid */}
-          <div className="flex justify-center">
-            <div className="relative max-w-6xl w-full">
+          <div className="flex justify-center relative">
+            <div className="relative max-w-6xl w-full z-10">
               {/* Asymmetric Grid Layout */}
               <div className="grid grid-cols-6 grid-rows-5 gap-4 w-full h-[600px]">
 
@@ -142,13 +153,14 @@ const Hero = () => {
                 >
                 <div className="col-span-1 row-span-1 col-start-4 row-start-5 bg-gradient-to-br from-green-400/20 to-emerald-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__delay-2s" >
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
-                                      <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
-                                        <ExternalLink className="text-white"></ExternalLink>
-                                      </div>
+
                                       <div>
-                                        <div className="font-bold text-neutral-800 dark:text-neutral-200 text-xs">Mathe</div>
-                                        <div className="text-neutral-600 dark:text-neutral-400 text-xs">Nachhilfe</div>
+                                        <div className="font-bold text-neutral-800 dark:text-neutral-200 text-xs">Mathe Nachhilfe</div>
+                                        <div className="text-neutral-600 dark:text-neutral-400 text-xs">Für Schüler und Studenten</div>
                                       </div>
+                                      <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+                                                                              <ExternalLink className="text-white"></ExternalLink>
+                                                                            </div>
                                     </div>
 
                 </div>
@@ -170,7 +182,6 @@ const Hero = () => {
 
                   </div>
                 </div>
-
 
               </div>
             </div>
