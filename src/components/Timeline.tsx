@@ -17,10 +17,10 @@ interface TimelineItem {
 const timelineData: TimelineItem[] = [
   {
     id: '1',
-    title: 'Senior Full-Stack Developer',
-    company: 'Tech Startup GmbH',
-    location: 'Berlin, Deutschland',
-    period: '2023 - Present',
+    title: 'Buisness Devoplement Internship',
+    company: 'Ecommerce Startup Störtebekker',
+    location: 'Frankfurt, Deutschland',
+    period: '08/2025 - 10/2025',
     description: [
       'Entwicklung und Wartung von React-basierten Webanwendungen',
       'Implementierung von RESTful APIs mit Node.js und Express',
@@ -32,49 +32,35 @@ const timelineData: TimelineItem[] = [
   },
   {
     id: '2',
-    title: 'Frontend Developer',
-    company: 'Digital Agency',
-    location: 'München, Deutschland',
-    period: '2021 - 2023',
+    title: 'B.Sc. Wirtschaftsinformatik',
+    company: 'Technische Universität Darmstadt',
+    location: 'Darmstadt, Deutschland',
+    period: '2024 - heute',
     description: [
-      'Entwicklung responsiver Websites für verschiedene Kunden',
-      'Zusammenarbeit mit UX/UI-Designern zur Umsetzung von Designs',
-      'Optimierung der Ladezeiten und SEO-Performance',
-      'Integration von Content Management Systemen'
+      'Aktulle Durchschnittsnote: 1.05',
+      'Objektorientierte Programmierung',
+      'Prozessoptimierung und Management',
+      'Rechnungswesen und Accounting'
     ],
-    technologies: ['Vue.js', 'JavaScript', 'SCSS', 'Webpack', 'Firebase'],
-    type: 'work'
-  },
-  {
-    id: '3',
-    title: 'Bachelor of Science - Informatik',
-    company: 'Technische Universität Berlin',
-    location: 'Berlin, Deutschland',
-    period: '2018 - 2021',
-    description: [
-      'Schwerpunkt auf Softwareentwicklung und Algorithmen',
-      'Abschlussarbeit: "Machine Learning in Web Applications"',
-      'Praktikum bei verschiedenen Tech-Unternehmen',
-      'Aktiv in der Studierendenvertretung'
-    ],
-    technologies: ['Java', 'Python', 'C++', 'MySQL', 'Git'],
+    technologies: ['Java', 'Git'],
     type: 'education'
   },
   {
-    id: '4',
-    title: 'E-Commerce Platform',
-    company: 'Freelance Projekt',
-    location: 'Remote',
-    period: '2022',
+    id: '3',
+    title: 'Abitur',
+    company: 'Weibelfeldschule',
+    location: 'Dreieich, Deutschland',
+    period: '2021 - 2024',
     description: [
-      'Vollständige E-Commerce-Lösung für lokale Unternehmen',
-      'Integration von Zahlungsanbietern (Stripe, PayPal)',
-      'Admin-Dashboard für Produktverwaltung',
-      'Mobile-First responsive Design'
+      'Abschlussnote: 1.2',
+      'Leistungskurse: Mathematik & Sport',
+      'Abiturpreis Deutsche Mathematiker Vereinigung',
+      'Abiturpreis Deutsche Physikalische Gesellschaft'
     ],
-    technologies: ['React', 'Next.js', 'Stripe API', 'MongoDB', 'Tailwind CSS'],
-    type: 'project'
-  }
+    technologies: [],
+    type: 'education'
+  },
+
 ];
 
 const Timeline = () => {
@@ -163,7 +149,7 @@ const Timeline = () => {
                 >
                   {/* Timeline dot */}
                   <div className={`absolute left-6 w-5 h-5 ${getTypeColor(item.type)} rounded-full border-4 border-white shadow-medium flex items-center justify-center z-10 hover:scale-125 transition-all duration-300`}>
-                    {getTypeIcon(item.type)}
+
                   </div>
 
                   {/* Content card */}
