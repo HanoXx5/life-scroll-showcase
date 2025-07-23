@@ -21,13 +21,13 @@ interface Project {
 const projects: Project[] = [
   {
     id: '1',
-    title: 'E-Commerce Platform',
+    title: 'Website Rechtsanwalt',
     description: 'Eine vollständige E-Commerce-Lösung mit modernem Design, Zahlungsintegration und Admin-Dashboard. Unterstützt mehrere Zahlungsmethoden und bietet ein nahtloses Einkaufserlebnis.',
-    image: ecommerceImage,
-    technologies: ['React', 'Next.js', 'Stripe', 'PostgreSQL', 'Tailwind CSS'],
-    liveUrl: '#',
+    image: "/src/assets/Screenshot 2025-07-23 154525.png",
+    technologies: ['React', 'Next.js', 'Tailwind CSS',"TypeScript"],
+    liveUrl: 'https://www.zscherneck-rechtsanwalt.de/',
     githubUrl: '#',
-    category: 'E-Commerce',
+    category: 'Website',
     featured: true
   },
   {
@@ -158,83 +158,9 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Other Projects */}
-        {otherProjects.length > 0 && (
-          <div>
-            <h3 className="text-2xl font-bold text-neutral-800 mb-8 text-center">Weitere Projekte</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {otherProjects.map((project, index) => (
-                <Card 
-                  key={project.id}
-                  className="group overflow-hidden bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-500 hover:scale-[1.02] animate-fade-up"
-                  style={{ animationDelay: `${(featuredProjects.length + index) * 0.1}s` }}
-                >
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute top-3 left-3">
-                      <Badge variant="secondary" className="bg-white/90 text-neutral-800 text-xs">
-                        {project.category}
-                      </Badge>
-                    </div>
-                  </div>
-                  
-                  <div className="p-4">
-                    <h4 className="text-lg font-bold text-neutral-800 mb-2 group-hover:text-primary-blue transition-colors duration-300">
-                      {project.title}
-                    </h4>
-                    <p className="text-neutral-600 text-sm mb-3 line-clamp-2">
-                      {project.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-1 mb-3">
-                      {project.technologies.slice(0, 3).map((tech, idx) => (
-                        <Badge 
-                          key={idx}
-                          variant="secondary"
-                          className="text-xs bg-gradient-primary/10 text-primary-blue border-primary-blue/20"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <Badge variant="secondary" className="text-xs bg-neutral-100 text-neutral-600">
-                          +{project.technologies.length - 3}
-                        </Badge>
-                      )}
-                    </div>
-                    
-                    <div className="flex gap-2">
-                      {project.liveUrl && (
-                        <Button variant="outline" size="sm" className="text-xs hover:bg-primary-blue/10 hover:border-primary-blue transition-all duration-300">
-                          <ExternalLink className="w-3 h-3 mr-1" />
-                          Live
-                        </Button>
-                      )}
-                      {project.githubUrl && (
-                        <Button variant="outline" size="sm" className="text-xs hover:bg-neutral-800/10 hover:border-neutral-800 transition-all duration-300">
-                          <Github className="w-3 h-3 mr-1" />
-                          Code
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        )}
 
-        {/* Call to action */}
-        <div className="text-center mt-16 animate-fade-up" style={{ animationDelay: '0.8s' }}>
-          <p className="text-neutral-600 mb-6">Interessiert an einer Zusammenarbeit?</p>
-          <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
-            Lass uns sprechen
-          </Button>
-        </div>
+
+
       </div>
     </section>
   );

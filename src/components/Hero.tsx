@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ExternalLink, Heart, Coffee, Music, Camera, MapPin, Briefcase, GraduationCap, Sparkles, Code, Zap } from "lucide-react";
+import "animate.css"
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
-          <div className="space-y-8 animate-fade-up">
+          <div className="space-y-8 animate__animated animate__fadeInDown animate__slow">
             <div>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
                 Hi, ich bin{" "}
@@ -43,18 +44,18 @@ const Hero = () => {
           </div>
 
           {/* Right content - Asymmetric Grid */}
-          <div className="flex justify-center animate-scale-in" style={{ animationDelay: '0.3s' }}>
+          <div className="flex justify-center">
             <div className="relative max-w-6xl w-full">
               {/* Asymmetric Grid Layout */}
               <div className="grid grid-cols-6 grid-rows-5 gap-4 w-full h-[600px]">
 
                 {/* Small decorative element - top left */}
-                <div className="col-span-1 row-span-1 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate-fade-in flex items-center justify-center" style={{ animationDelay: '0.4s' }}>
+                <div className="col-span-1 row-span-1 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInLeft animate__delay-2s animate__slow flex items-center justify-center" >
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
 
                 {/* Main Profile Card - Large asymmetric placement */}
-                <div className="col-span-3 rounded-3xl row-span-3 col-start-2 row-start-1 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-4xl p-8 shadow-2xl hover:shadow-xl transition-all duration-500 animate-scale-in" style={{ animationDelay: '0.3s' }}>
+                <div className="col-span-3 rounded-3xl row-span-3 col-start-2 row-start-1 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-4xl p-8 shadow-2xl hover:shadow-xl transition-all duration-500 animate__animated animate__zoomIn animate__delay-1s animate__slow">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-6">
                     <div className="relative">
                      <div className="w-58 h-58 rounded-3xl shadow-xl overflow-hidden">
@@ -65,7 +66,7 @@ const Hero = () => {
                              />
                            </div>
                       <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white dark:border-neutral-900 shadow-lg flex items-center justify-center">
-                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
                       </div>
                     </div>
 
@@ -79,7 +80,7 @@ const Hero = () => {
                 </div>
 
                 {/* Tall Card - right side */}
-                <div className="col-span-1 row-span-2 col-start-5 row-start-1 bg-gradient-to-b from-red-400/20 to-pink-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate-slide-up" style={{ animationDelay: '0.5s' }}>
+                <div className="col-span-1 row-span-2 col-start-5 row-start-1 bg-gradient-to-b from-red-400/20 to-pink-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__slower">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-4">
                     <div>
                     </div>
@@ -92,12 +93,12 @@ const Hero = () => {
                 </div>
 
                 {/* Code decoration - far right */}
-                <div className="col-span-1 row-span-1 col-start-6 row-start-2 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate-fade-in flex items-center justify-center" style={{ animationDelay: '0.7s' }}>
+                <div className="col-span-1 row-span-1 col-start-6 row-start-2 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInRightBig animate__delay-2s animate__slow">
                   <Code className="w-6 h-6 text-white" />
                 </div>
 
                 {/* University Card - repositioned */}
-                <div className="col-span-2 row-span-1 col-start-5 row-start-4 relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                <div className="col-span-2 row-span-1 col-start-5 row-start-4 relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInRight animate__slow">
                   <div className="flex items-center justify-center h-full space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <GraduationCap className="w-6 h-6 text-white" />
@@ -110,7 +111,7 @@ const Hero = () => {
                 </div>
 
                 {/* Social Media Section - repositioned asymmetrically */}
-                <div className="col-span-2 row-span-2 col-start-2 row-start-4 bg-gradient-to-br from-gray-100/50 to-gray-200/50 dark:from-neutral-800/50 dark:to-neutral-900/50 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-xl hover:scale-105 transition-all duration-500 animate-slide-up" style={{ animationDelay: '0.8s' }}>
+                <div className="col-span-2 row-span-2 col-start-2 row-start-4 bg-gradient-to-br from-gray-100/50 to-gray-200/50 dark:from-neutral-800/50 dark:to-neutral-900/50 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInUpBig animate__slower">
                   <div className="flex flex-col items-center justify-center h-full space-y-4">
                     <h3 className="font-bold text-neutral-800 dark:text-neutral-200 text-lg">Connect</h3>
                     <div className="flex space-x-4">
@@ -125,7 +126,7 @@ const Hero = () => {
                 </div>
 
                 {/* Energy/Lightning decoration */}
-                <div className="col-span-1 row-span-1 col-start-1 row-start-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center" style={{ animationDelay: '0.9s' }}>
+                <div className="col-span-1 row-span-1 col-start-1 row-start-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInLeft animate__delay-3s">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
@@ -138,10 +139,10 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   className="col-span-1 row-span-1 col-start-4 row-start-5"
                 >
-                <div className="col-span-1 row-span-1 col-start-4 row-start-5 bg-gradient-to-br from-green-400/20 to-emerald-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl animate-bounce hover:scale-105 transition-all duration-500 animate-fade-in"  style={{ animationDelay: '1.0s', animationDuration: '2s' }} >
+                <div className="col-span-1 row-span-1 col-start-4 row-start-5 bg-gradient-to-br from-green-400/20 to-emerald-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInUp animate__delay-2s" >
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
                                       <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
-                                        <span className="text-lg font-bold text-white">∑</span>
+                                        <ExternalLink></ExternalLink>
                                       </div>
                                       <div>
                                         <div className="font-bold text-neutral-800 dark:text-neutral-200 text-xs">Mathe</div>
@@ -153,12 +154,12 @@ const Hero = () => {
                    </a>
 
                 {/* Small coffee decoration */}
-                <div className="col-span-1 row-span-1 col-start-1 row-start-5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate-fade-in flex items-center justify-center" style={{ animationDelay: '1.2s' }}>
+                <div className="col-span-1 row-span-1 col-start-1 row-start-5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__rotateInUpRight animate__delay-1s flex items-center justify-center">
                   <Coffee className="w-6 h-6 text-white" />
                 </div>
 
-                {/* Innovation badge - floating */}
-                <div className="col-span-2 row-span-1 col-start-5 row-start-5 bg-gradient-to-r from-teal-400/20 to-cyan-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate-slide-up" style={{ animationDelay: '1.3s' }}>
+                {/* Wirtschaftsinformatik badge - floating */}
+                <div className="col-span-2 row-span-1 col-start-5 row-start-5 bg-gradient-to-r from-teal-400/20 to-cyan-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInUpBig animate__slow">
                   <div className="flex items-center justify-center h-full space-x-6">
 
                     <div className="text-center flex flex-col items-center space-y-1">
@@ -175,6 +176,8 @@ const Hero = () => {
           </div>
 
         </div>
+        <br></br>
+        <br></br>
       </div>
     </section>
   );

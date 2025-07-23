@@ -126,8 +126,8 @@ const Timeline = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Mein <span className="bg-gradient-text bg-clip-text text-transparent">Werdegang</span>
           </h2>
-          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-            Von der Ausbildung bis zu aktuellen Projekten - hier ist meine berufliche Reise
+          <p className="text-xl dark:text-neutral-200 text-neutral-600 max-w-2xl mx-auto">
+            Von Bildung bis zu aktuellen Projekten hier ist meine berufliche Reise
           </p>
         </div>
 
@@ -158,16 +158,16 @@ const Timeline = () => {
                       <div className="space-y-4">
                         <div className="flex flex-wrap items-start justify-between gap-4">
                           <div>
-                            <h3 className="text-xl font-bold text-neutral-800 group-hover:text-primary-blue transition-colors duration-300">
+                            <h3 className="text-xl font-bold  dark:text-neutral-200 text-neutral-800 group-hover:text-primary-blue transition-colors duration-300">
                               {item.title}
                             </h3>
-                            <p className="text-lg text-neutral-600 font-medium">{item.company}</p>
-                            <div className="flex items-center gap-2 text-neutral-500 mt-1">
+                            <p className="text-lg  dark:text-neutral-200 text-neutral-600 font-medium">{item.company}</p>
+                            <div className="flex items-center gap-2  dark:text-neutral-200 text-neutral-500 mt-1">
                               <MapPin className="w-4 h-4" />
                               <span>{item.location}</span>
                             </div>
                           </div>
-                          <Badge variant="outline" className="bg-neutral-100/50 border-neutral-200 text-neutral-700">
+                          <Badge variant="outline" className="bg-neutral-100/50 border-neutral-200  dark:text-neutral-200 text-neutral-700">
                             {item.period}
                           </Badge>
                         </div>
@@ -176,7 +176,7 @@ const Timeline = () => {
                           {item.description.map((desc, idx) => (
                             <div key={idx} className="flex items-start gap-2">
                               <div className="w-2 h-2 bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                              <p className="text-neutral-600">{desc}</p>
+                              <p className="text-neutral-600  dark:text-neutral-500">{desc}</p>
                             </div>
                           ))}
                         </div>
