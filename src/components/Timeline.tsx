@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Calendar, MapPin, Building } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface TimelineItem {
   id: string;
@@ -77,6 +78,29 @@ const timelineData: TimelineItem[] = [
 ];
 
 const Timeline = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const timelineSection = document.getElementById('timeline-section');
+      if (!timelineSection) return;
+      
+      const rect = timelineSection.getBoundingClientRect();
+      const sectionHeight = timelineSection.offsetHeight;
+      const viewportHeight = window.innerHeight;
+      
+      // Calculate how much of the timeline section has been scrolled through
+      const scrolled = Math.max(0, viewportHeight - rect.top);
+      const progress = Math.min(100, (scrolled / (sectionHeight + viewportHeight)) * 100);
+      
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'work':
@@ -104,7 +128,7 @@ const Timeline = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800 relative overflow-hidden transition-colors duration-500">
+    <section id="timeline-section" className="py-20 bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800 relative overflow-hidden transition-colors duration-500">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-64 h-64 bg-accent-purple/5 dark:bg-accent-purple/10 rounded-full blur-3xl"></div>
@@ -123,8 +147,12 @@ const Timeline = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-blue via-accent-purple to-accent-teal"></div>
+            {/* Timeline line with scroll progress */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-neutral-200 dark:bg-neutral-700"></div>
+            <div 
+              className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-primary-blue via-accent-purple to-accent-teal transition-all duration-300 ease-out"
+              style={{ height: `${scrollProgress}%` }}
+            ></div>
 
             <div className="space-y-12">
               {timelineData.map((item, index) => (

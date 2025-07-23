@@ -26,14 +26,14 @@ const Hero = () => {
               <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
                 Hi, ich bin{" "}
                 <span className="bg-gradient-text bg-clip-text text-transparent">
-                  Leidenschaftlich
+                  Sebastian
                 </span>
-                <span className="text-neutral-800 dark:text-neutral-200">©</span>
+                <span className="text-neutral-800 dark:text-neutral-200"> Zscherneck</span>
               </h1>
               
               <p className="text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-2xl">
-                Ein kreativer Mensch mit Leidenschaft für Innovation, Design und Technologie. 
-                Ich liebe es, Ideen zum Leben zu erwecken und dabei stets neue Wege zu erkunden.
+                Wirtschaftsinformatik Student an der TU Darmstadt mit Leidenschaft für Innovation, 
+                Design und Technologie. Ich liebe es, Ideen zum Leben zu erwecken und dabei stets neue Wege zu erkunden.
               </p>
             </div>
 
@@ -91,15 +91,15 @@ const Hero = () => {
                   </div>
                   
                   <div>
-                    <h3 className="text-3xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">Max Mustermann</h3>
+                    <h3 className="text-3xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">Sebastian Zscherneck</h3>
                     <div className="flex items-center justify-center gap-2 text-neutral-600 dark:text-neutral-400 mb-6">
                       <MapPin className="w-4 h-4" />
-                      <span>Berlin, Deutschland</span>
+                      <span>Darmstadt, Deutschland</span>
                     </div>
                     
                     <div className="inline-flex items-center gap-3 bg-gradient-primary/10 text-primary-blue px-6 py-3 rounded-full border border-primary-blue/20">
-                      <Coffee className="w-5 h-5" />
-                      <span className="font-medium text-lg">Kreativer Kopf</span>
+                      <GraduationCap className="w-5 h-5" />
+                      <span className="font-medium text-lg">WI Student</span>
                     </div>
                   </div>
                 </div>
@@ -148,8 +148,59 @@ const Hero = () => {
                     <GraduationCap className="w-5 h-5 text-white" />
                   </div>
                   <div className="text-sm">
-                    <div className="font-medium text-neutral-800 dark:text-neutral-200">Informatik</div>
-                    <div className="text-neutral-600 dark:text-neutral-400">B.Sc.</div>
+                    <div className="font-medium text-neutral-800 dark:text-neutral-200">Wirtschaftsinformatik</div>
+                    <div className="text-neutral-600 dark:text-neutral-400">TU Darmstadt</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Neue größere Kacheln */}
+              {/* Social Media Kachel */}
+              <div className="absolute top-20 -left-20 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-soft hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: '1.3s' }}>
+                <div className="text-center space-y-4">
+                  <h4 className="font-semibold text-neutral-800 dark:text-neutral-200 text-lg">Social Media</h4>
+                  <div className="flex gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                      <Linkedin className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                      <Github className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Uni Kachel */}
+              <div className="absolute top-20 -right-20 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-soft hover:scale-105 transition-all duration-300 animate-scale-in" style={{ animationDelay: '1.5s' }}>
+                <div className="text-center space-y-3">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <GraduationCap className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-neutral-800 dark:text-neutral-200">TU Darmstadt</div>
+                    <div className="text-sm text-neutral-600 dark:text-neutral-400">Wirtschaftsinformatik</div>
+                    <div className="text-xs text-neutral-500 dark:text-neutral-500">Bachelor Student</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Dekorative Gradient Kachel */}
+              <div className="absolute bottom-20 -left-20 w-24 h-24 bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-500 rounded-3xl shadow-soft hover:scale-110 transition-all duration-300 animate-float opacity-80" style={{ animationDelay: '1.7s' }}>
+                <div className="w-full h-full rounded-3xl bg-gradient-to-br from-transparent via-white/10 to-transparent"></div>
+              </div>
+              
+              {/* Mathenachhilfe Kachel */}
+              <div className="absolute bottom-20 -right-20 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-soft hover:scale-105 transition-all duration-300 animate-slide-up" style={{ animationDelay: '1.9s' }}>
+                <div className="text-center space-y-3">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <span className="text-2xl font-bold text-white">∑</span>
+                  </div>
+                  <div>
+                    <div className="font-bold text-neutral-800 dark:text-neutral-200">Mathenachhilfe</div>
+                    <div className="text-sm text-neutral-600 dark:text-neutral-400">Verfügbar</div>
                   </div>
                 </div>
               </div>
