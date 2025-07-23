@@ -156,62 +156,65 @@ const Hero = () => {
               
               {/* Neue größere Kacheln */}
               {/* Social Media Kachel */}
-              <div className="absolute top-20 -left-20 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-soft hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: '1.3s' }}>
-                <div className="text-center space-y-4">
-                  <h4 className="font-semibold text-neutral-800 dark:text-neutral-200 text-lg">Social Media</h4>
-                  <div className="flex gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                      <Linkedin className="w-6 h-6 text-white" />
+              <div className="absolute top-16 -left-32 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-8 shadow-soft hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: '1.3s' }}>
+                <div className="text-center space-y-6">
+                  <h4 className="font-bold text-neutral-800 dark:text-neutral-200 text-xl">Social Media</h4>
+                  <div className="flex gap-4">
+                    <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                      <Linkedin className="w-7 h-7 text-white" />
                     </div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                      <Github className="w-6 h-6 text-white" />
+                    <div className="w-14 h-14 bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                      <Github className="w-7 h-7 text-white" />
                     </div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-                      <Mail className="w-6 h-6 text-white" />
+                    <div className="w-14 h-14 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                      <Mail className="w-7 h-7 text-white" />
                     </div>
                   </div>
                 </div>
               </div>
               
               {/* Uni Kachel */}
-              <div className="absolute top-20 -right-20 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-soft hover:scale-105 transition-all duration-300 animate-scale-in" style={{ animationDelay: '1.5s' }}>
-                <div className="text-center space-y-3">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
-                    <GraduationCap className="w-8 h-8 text-white" />
+              <div className="absolute top-16 -right-32 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-8 shadow-soft hover:scale-105 transition-all duration-300 animate-scale-in" style={{ animationDelay: '1.5s' }}>
+                <div className="text-center space-y-4">
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <GraduationCap className="w-10 h-10 text-white" />
                   </div>
                   <div>
-                    <div className="font-bold text-neutral-800 dark:text-neutral-200">TU Darmstadt</div>
-                    <div className="text-sm text-neutral-600 dark:text-neutral-400">Wirtschaftsinformatik</div>
-                    <div className="text-xs text-neutral-500 dark:text-neutral-500">Bachelor Student</div>
+                    <div className="font-bold text-neutral-800 dark:text-neutral-200 text-lg">TU Darmstadt</div>
+                    <div className="text-neutral-600 dark:text-neutral-400">Wirtschaftsinformatik</div>
+                    <div className="text-sm text-neutral-500 dark:text-neutral-500">Bachelor Student</div>
                   </div>
                 </div>
               </div>
               
               {/* Dekorative Gradient Kachel */}
-              <div className="absolute bottom-20 -left-20 w-24 h-24 bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-500 rounded-3xl shadow-soft hover:scale-110 transition-all duration-300 animate-float opacity-80" style={{ animationDelay: '1.7s' }}>
-                <div className="w-full h-full rounded-3xl bg-gradient-to-br from-transparent via-white/10 to-transparent"></div>
+              <div className="absolute bottom-16 -left-32 w-32 h-32 bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-500 rounded-3xl shadow-soft hover:scale-105 transition-all duration-300 animate-fade-in opacity-90" style={{ animationDelay: '1.7s' }}>
+                <div className="w-full h-full rounded-3xl bg-gradient-to-br from-transparent via-white/10 to-transparent flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-2xl backdrop-blur-sm"></div>
+                </div>
               </div>
               
               {/* Mathenachhilfe Kachel */}
-              <div className="absolute bottom-20 -right-20 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-soft hover:scale-105 transition-all duration-300 animate-slide-up" style={{ animationDelay: '1.9s' }}>
-                <div className="text-center space-y-3">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto">
-                    <span className="text-2xl font-bold text-white">∑</span>
+              <div className="absolute bottom-16 -right-32 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-3xl p-8 shadow-soft hover:scale-105 transition-all duration-300 animate-slide-up" style={{ animationDelay: '1.9s' }}>
+                <div className="text-center space-y-4">
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto">
+                    <span className="text-3xl font-bold text-white">∑</span>
                   </div>
                   <div>
-                    <div className="font-bold text-neutral-800 dark:text-neutral-200">Mathenachhilfe</div>
-                    <div className="text-sm text-neutral-600 dark:text-neutral-400">Verfügbar</div>
+                    <div className="font-bold text-neutral-800 dark:text-neutral-200 text-lg">Mathenachhilfe</div>
+                    <div className="text-neutral-600 dark:text-neutral-400">Verfügbar</div>
+                    <div className="text-sm text-neutral-500 dark:text-neutral-500">Alle Klassenstufen</div>
                   </div>
                 </div>
               </div>
 
-              {/* Zusätzliche floating elements */}
-              <div className="absolute top-1/2 -left-12 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-full p-4 shadow-soft hover:scale-110 transition-all duration-300 animate-float" style={{ animationDelay: '1.3s' }}>
-                <Heart className="w-6 h-6 text-red-500" />
+              {/* Zusätzliche floating elements - ohne kontinuierliche Animationen */}
+              <div className="absolute top-1/2 -left-16 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-full p-5 shadow-soft hover:scale-110 transition-all duration-300 animate-fade-in" style={{ animationDelay: '1.3s' }}>
+                <Heart className="w-8 h-8 text-red-500" />
               </div>
               
-              <div className="absolute top-1/2 -right-12 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-full p-4 shadow-soft hover:scale-110 transition-all duration-300 animate-float" style={{ animationDelay: '1.5s' }}>
-                <ExternalLink className="w-6 h-6 text-primary-blue" />
+              <div className="absolute top-1/2 -right-16 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border border-white/30 dark:border-neutral-700/30 rounded-full p-5 shadow-soft hover:scale-110 transition-all duration-300 animate-fade-in" style={{ animationDelay: '1.5s' }}>
+                <ExternalLink className="w-8 h-8 text-primary-blue" />
               </div>
             </div>
           </div>
