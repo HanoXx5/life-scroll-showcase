@@ -28,52 +28,52 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-20">
       <br/>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left content */}
-          <div className="space-y-8 animate__animated animate__fadeInDown animate__slow relative">
-            <div className="bg-gradient-to-br from-white/80 via-gray-50/90 to-blue-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl p-8 shadow-xl">
-              <div className="relative z-10">
-                <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                  Hi, ich bin{" "}
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                    Sebastian
-                  </span>
-                  <span className="text-neutral dark:text-neutral-200"> Zscherneck</span>
-                </h1>
+         {/* Left content */}
+         <div className="space-y-8 relative ">
+           <div className="bg-gradient-to-br from-white/80 via-gray-50/90 to-blue-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl p-8 shadow-xl animate__animated animate__fadeInDown animate__slow ">
+             <div className="relative z-10 ">
+               <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                 Hi, ich bin{" "}
+                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                   Sebastian
+                 </span>
+                 <span className="text-neutral dark:text-neutral-200"> Zscherneck</span>
+               </h1>
 
-                <p className="text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-2xl">
-                  Wirtschaftsinformatik Student an der TU Darmstadt mit Leidenschaft für Innovation,
-                  Design und Technologie. Ich liebe es, Ideen zum Leben zu erwecken und dabei stets neue Wege zu erkunden.
-                </p>
-              </div>
-            </div>
+               <p className="text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-2xl">
+                 Wirtschaftsinformatik Student im Bachelor an der TU Darmstadt mit Leidenschaft für Innovation,
+                 Design und Technologie. Ich liebe es, Ideen zum Leben zu erwecken und dabei stets neue Wege zu erkunden.
+                 Falls sie Interesse an einer Zusammenarbeit bei einem Projekt haben, kontaktieren sie mich gerne.
+               </p>
+               <br/>
+             </div>
+           </div>
 
-            {/* Redesigned Buttons with glassmorphism style */}
-            <div className="flex flex-wrap gap-4 relative z-10">
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer group">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                    <ArrowRight className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-neutral-800 dark:text-neutral-200 text-sm">Erfahren Sie mehr</div>
-                    <div className="text-neutral-600 dark:text-neutral-400 text-xs">Über mich und meine Skills</div>
-                  </div>
-                </div>
-              </div>
+           {/* Redesigned Buttons with glassmorphism style - Equal width */}
+           <div className="flex gap-4 relative z-10">
+             <div className="flex-1 bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer group animate__animated animate__fadeInLeft animate__slow">
+               <div className="flex items-center space-x-3">
+                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform ">
+                   <ArrowRight className="w-6 h-6 text-white" />
+                 </div>
+                 <div>
+                   <div className="font-bold text-neutral-800 dark:text-neutral-200 text-sm">Erfahren Sie mehr</div>
+                 </div>
+               </div>
+             </div>
 
-              <div className="bg-gradient-to-br from-teal-400/20 to-cyan-500/20 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer group">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                    <FolderOpen className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-neutral-800 dark:text-neutral-200 text-sm">Meine Projekte</div>
-                    <div className="text-neutral-600 dark:text-neutral-400 text-xs">Portfolio und Arbeiten</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+             <div className="flex-1 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer group animate__animated animate__fadeInUp animate__delay-1s animate__slow">
+               <div className="flex items-center space-x-3">
+                 <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                   <FolderOpen className="w-6 h-6 text-white" />
+                 </div>
+                 <div>
+                   <div className="font-bold text-neutral-800 dark:text-neutral-200 text-sm">Meine Projekte</div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
 
           {/* Right content - Asymmetric Grid */}
           <div className="flex justify-center relative">
@@ -178,7 +178,6 @@ const Hero = () => {
 
                                       <div>
                                         <div className="font-bold text-neutral-800 dark:text-neutral-200 text-xs">Mathe Nachhilfe</div>
-                                        <div className="text-neutral-600 dark:text-neutral-400 text-xs">Für Schüler und Studenten</div>
                                       </div>
                                       <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
                                                                               <ExternalLink className="text-white"></ExternalLink>
@@ -189,7 +188,7 @@ const Hero = () => {
                    </a>
 
                 {/* Small code decoration */}
-                <div className="col-span-1 row-span-1 col-start-1 row-start-5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__rotateInUpRight animate__delay-1s flex items-center justify-center">
+                <div className="col-span-1 row-span-1 col-start-1 row-start-5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInUpBig animate__delay-1s animate__slow flex items-center justify-center">
                   <Code className="w-6 h-6 text-white" />
                 </div>
 
