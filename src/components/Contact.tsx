@@ -57,7 +57,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <Card className="p-6 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <Card className="p-6 bg-gradient-to-br from-white/90 via-blue-50/80 to-purple-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Mail className="w-6 h-6 text-white" />
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <Card className="p-6 bg-gradient-to-br from-white/90 via-blue-50/80 to-purple-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-accent-teal rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Phone className="w-6 h-6 text-white" />
@@ -81,7 +81,7 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <Card className="p-6 bg-gradient-to-br from-white/90 via-blue-50/80 to-purple-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-accent-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <MapPin className="w-6 h-6 text-white" />
@@ -98,13 +98,13 @@ const Contact = () => {
             <div>
               <h4 className="font-semibold text-neutral-800 mb-4">Folge mir</h4>
               <div className="flex gap-4">
-                <Button variant="outline" size="lg" className="hover:bg-neutral-800/10 hover:border-neutral-800 transition-all duration-300">
+                <Button variant="outline" size="lg" className="hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:border-primary-blue transition-all duration-300">
                   <Github className="w-5 h-5" />
                 </Button>
-                <Button variant="outline" size="lg" className="hover:bg-primary-blue/10 hover:border-primary-blue transition-all duration-300">
+                <Button variant="outline" size="lg" className="hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:border-primary-blue transition-all duration-300">
                   <Linkedin className="w-5 h-5" />
                 </Button>
-                <Button variant="outline" size="lg" className="hover:bg-accent-teal/10 hover:border-accent-teal transition-all duration-300">
+                <Button variant="outline" size="lg" className="hover:bg-gradient-to-r hover:from-teal-400 hover:to-cyan-500 hover:border-accent-teal transition-all duration-300">
                   <Twitter className="w-5 h-5" />
                 </Button>
               </div>
@@ -113,7 +113,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <Card className="p-8 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft hover:shadow-medium transition-all duration-300">
+            <Card className="p-8 bg-gradient-to-br from-white/90 via-blue-50/80 to-purple-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl shadow-xl">
               <h3 className="text-2xl font-bold text-neutral-800 mb-6">Schreib mir eine Nachricht</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -185,7 +185,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
+                  className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white hover:shadow-glow transition-all duration-300 group"
                 >
                   <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
                   Nachricht senden

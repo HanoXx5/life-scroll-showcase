@@ -79,7 +79,57 @@ const Projects = () => {
         {/* Featured Projects */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-300 mb-8 text-center">Featured Projekte</h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Mobile Ansicht */}
+          <div className="flex flex-col gap-8 md:hidden">
+            {featuredProjects.map((project) => (
+              <Card
+                key={project.id}
+                className="overflow-hidden bg-gradient-to-br from-white/90 via-blue-50/80 to-purple-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl shadow-xl"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-2xl mb-4"
+                />
+                <div className="px-4 pb-4">
+                  <h4 className="text-lg font-bold text-neutral-800 dark:text-neutral-200 mb-2">
+                    {project.title}
+                  </h4>
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {project.technologies.map((tech, idx) => (
+                      <Badge
+                        key={idx}
+                        variant="secondary"
+                        className="bg-gradient-primary/10 text-primary-blue border-primary-blue/20"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="flex gap-2 mt-2">
+                    {project.liveUrl && (
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="sm" className="hover:bg-primary-blue/10 hover:border-primary-blue transition-all duration-300">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live
+                        </Button>
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="sm" className="hover:bg-neutral-800/10 hover:border-neutral-800 transition-all duration-300">
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </Button>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+          {/* Desktop Ansicht */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto hidden md:grid">
             {featuredProjects.map((project, index) => (
               <Card 
                 key={project.id}

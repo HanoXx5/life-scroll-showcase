@@ -75,9 +75,37 @@ const Hero = () => {
            </div>
          </div>
 
-          {/* Right content - Asymmetric Grid */}
+          {/* Right content */}
+          {/* Mobile: Nur Bild und Social, Desktop: Asymmetrisches Grid */}
           <div className="flex justify-center relative">
-            <div className="relative max-w-6xl w-full z-10">
+            {/* Mobile Ansicht */}
+            <div className="w-full flex flex-col items-center gap-6 lg:hidden">
+              <div className="w-40 h-40 rounded-3xl shadow-xl overflow-hidden">
+                <img
+                  src="/src/assets/profile-image.jpg"
+                  alt="Sebastian Zscherneck"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="flex items-center justify-center gap-2 text-neutral-600 dark:text-neutral-400">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-sm">Egelsbach, Deutschland</span>
+                </div>
+                <div className="flex gap-4 mt-2">
+                  <a href="https://www.linkedin.com/in/sebastian-zscherneck-717a44297" target="_blank" rel="noopener noreferrer">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+                      <Linkedin className="w-5 h-5 text-white" />
+                    </div>
+                  </a>
+                  <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+                    <Mail className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Desktop Ansicht */}
+            <div className="relative max-w-6xl w-full z-10 hidden lg:block">
               {/* Asymmetric Grid Layout */}
               <div className="grid grid-cols-6 grid-rows-5 gap-4 w-full h-[600px]">
 

@@ -29,16 +29,16 @@ const Footer = () => {
             </div>
             
             <div className="flex gap-3">
-              <Button variant="outline" size="sm" className="border-neutral-600 text-neutral-300 hover:bg-white/10 hover:border-white/30 transition-all duration-300">
+              <Button variant="outline" size="sm" className="border-primary-blue text-neutral-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:border-primary-blue transition-all duration-300">
                 <Github className="w-4 h-4" />
               </Button>
-              <Button variant="outline" size="sm" className="border-neutral-600 text-neutral-300 hover:bg-primary-blue/20 hover:border-primary-blue/50 transition-all duration-300">
+              <Button variant="outline" size="sm" className="border-primary-blue text-neutral-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:border-primary-blue transition-all duration-300">
                 <Linkedin className="w-4 h-4" />
               </Button>
-              <Button variant="outline" size="sm" className="border-neutral-600 text-neutral-300 hover:bg-accent-teal/20 hover:border-accent-teal/50 transition-all duration-300">
+              <Button variant="outline" size="sm" className="border-accent-teal text-neutral-300 hover:bg-gradient-to-r hover:from-teal-400 hover:to-cyan-500 hover:border-accent-teal transition-all duration-300">
                 <Twitter className="w-4 h-4" />
               </Button>
-              <Button variant="outline" size="sm" className="border-neutral-600 text-neutral-300 hover:bg-accent-purple/20 hover:border-accent-purple/50 transition-all duration-300">
+              <Button variant="outline" size="sm" className="border-accent-purple text-neutral-300 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:border-accent-purple transition-all duration-300">
                 <Mail className="w-4 h-4" />
               </Button>
             </div>
