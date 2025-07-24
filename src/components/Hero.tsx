@@ -14,6 +14,14 @@ const Hero = () => {
     }
   }, []);
 
+  // Smooth scroll helper
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-neutral-50 via-white to-neutral-100 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 transition-colors duration-500">
       {/* Particles.js Container */}
@@ -51,7 +59,10 @@ const Hero = () => {
 
            {/* Redesigned Buttons with glassmorphism style - Equal width */}
            <div className="flex gap-4 relative z-10">
-             <div className="flex-1 bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer group animate__animated animate__fadeInLeft animate__slow">
+             <div
+               className="flex-1 bg-gradient-to-br from-blue-500/20 to-purple-600/20 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer group animate__animated animate__fadeInLeft animate__slow"
+               onClick={() => scrollToSection("timeline-section")}
+             >
                <div className="flex items-center space-x-3">
                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform ">
                    <ArrowRight className="w-6 h-6 text-white" />
@@ -62,7 +73,10 @@ const Hero = () => {
                </div>
              </div>
 
-             <div className="flex-1 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer group animate__animated animate__fadeInUp animate__delay-1s animate__slow">
+             <div
+               className="flex-1 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer group animate__animated animate__fadeInUp animate__delay-1s animate__slow"
+               onClick={() => scrollToSection("projects-section")}
+             >
                <div className="flex items-center space-x-3">
                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                    <FolderOpen className="w-6 h-6 text-white" />
@@ -80,7 +94,7 @@ const Hero = () => {
           <div className="flex justify-center relative">
             {/* Mobile Ansicht */}
             <div className="w-full flex flex-col items-center gap-6 lg:hidden">
-              <div className="w-40 h-40 rounded-3xl shadow-xl overflow-hidden">
+              <div className="w-64 h-64 rounded-3xl shadow-xl overflow-hidden">
                 <img
                   src="/src/assets/profile-image.jpg"
                   alt="Sebastian Zscherneck"
@@ -98,9 +112,11 @@ const Hero = () => {
                       <Linkedin className="w-5 h-5 text-white" />
                     </div>
                   </a>
+                  <a href="mailto:s.zscherneck@web.de" target="_blank" rel="noopener noreferrer">
                   <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
                     <Mail className="w-5 h-5 text-white" />
                   </div>
+                    </a>
                 </div>
               </div>
             </div>
@@ -170,25 +186,27 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Social Media Section - repositioned asymmetrically */}
-                <div className="col-span-2 row-span-2 col-start-2 row-start-4 bg-gradient-to-br from-gray-100/50 to-gray-200/50 dark:from-neutral-800/50 dark:to-neutral-900/50 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInUpBig animate__slower">
-                  <div className="flex flex-col items-center justify-center h-full space-y-4">
-                    <h3 className="font-bold text-neutral-800 dark:text-neutral-200 text-lg">Let´s Connect</h3>
-                    <div className="flex space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                        <a href= "https://www.linkedin.com/in/sebastian-zscherneck-717a44297" target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="w-6 h-6 text-white" />
-                        </a>
-                      </div>
-                      <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                        <Mail className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                  </div>
+                {/* Social Media Section - "Let's Connect" nur Text, 1 Row */}
+                <div className="col-span-2 row-span-1 col-start-2 row-start-4 bg-gradient-to-br from-gray-100/50 to-gray-200/50 dark:from-neutral-800/50 dark:to-neutral-900/50 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-3xl p-6 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInUpBig animate__slower flex items-center justify-center">
+                  <h3 className="font-bold text-neutral-800 dark:text-neutral-200 text-lg">Let´s Connect</h3>
+                </div>
+
+                {/* LinkedIn Kachel */}
+                <div className="col-span-1 row-span-1 col-start-2 row-start-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg animate__animated animate__fadeInUpBig animate__delay-2s animate__slow">
+                  <a href="https://www.linkedin.com/in/sebastian-zscherneck-717a44297" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-6 h-6 text-white" />
+                  </a>
+                </div>
+
+                {/* Mail Kachel */}
+                <div className="col-span-1 row-span-1 col-start-3 row-start-5 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg animate__animated animate__fadeInUpBig animate__delay-1s animate__slower">
+                  <a href="mailto:s.zscherneck@web.de" target="_blank" rel="noopener noreferrer">
+                    <Mail className="w-6 h-6 text-white" />
+                  </a>
                 </div>
 
                 {/* Energy/Lightning decoration */}
-                <div className="col-span-1 row-span-2 col-start-1 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInLeft animate__delay-3s">
+                <div className="col-span-1 row-span-1 col-start-1 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInLeft animate__delay-3s">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
@@ -216,7 +234,7 @@ const Hero = () => {
                    </a>
 
                 {/* Small code decoration */}
-                <div className="col-span-1 row-span-1 col-start-1 row-start-5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInUpBig animate__delay-1s animate__slow flex items-center justify-center">
+                <div className="col-span-1 row-span-2 col-start-1 row-start-4 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInUpBig animate__delay-1s animate__slow flex items-center justify-center">
                   <Code className="w-6 h-6 text-white" />
                 </div>
 

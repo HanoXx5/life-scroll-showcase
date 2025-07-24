@@ -59,7 +59,7 @@ const Projects = () => {
   const otherProjects = projects.filter(project => !project.featured);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 relative overflow-hidden transition-colors duration-500">
+    <section id="projects-section" className="py-20 bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 relative overflow-hidden transition-colors duration-500">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-32 right-10 w-72 h-72 bg-accent-teal/10 dark:bg-accent-teal/10 rounded-full blur-3xl"></div>
@@ -150,22 +150,7 @@ const Projects = () => {
                       {project.category}
                     </Badge>
                   </div>
-                  
-                  {/* Action buttons on hover */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    {project.liveUrl && (
-                      <Button size="sm" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30">
-                        <Eye className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </Button>
-                    )}
-                    {project.githubUrl && (
-                      <Button size="sm" variant="outline" className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30">
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </Button>
-                    )}
-                  </div>
+                  {/* Action buttons auf dem Bild entfernt */}
                 </div>
                 
                 <div className="p-6">
@@ -190,17 +175,14 @@ const Projects = () => {
                   
                   <div className="flex gap-2">
                     {project.liveUrl && (
-                      <Button variant="outline" size="sm" className="hover:bg-primary-blue/10 hover:border-primary-blue transition-all duration-300">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live ansehen
-                      </Button>
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="sm" className="hover:bg-primary-blue/10 hover:border-primary-blue transition-all duration-300">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live ansehen
+                        </Button>
+                      </a>
                     )}
-                    {project.githubUrl && (
-                      <Button variant="outline" size="sm" className="hover:bg-neutral-800/10 hover:border-neutral-800 transition-all duration-300">
-                        <Github className="w-4 h-4 mr-2" />
-                        GitHub
-                      </Button>
-                    )}
+                    {/* GitHub Button entfernt */}
                   </div>
                 </div>
               </Card>
