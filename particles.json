@@ -72,11 +72,11 @@
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "repulse"
+        "mode": "bubble"
       },
       "onclick": {
-        "enable": false,
-        "mode": "remove"
+        "enable": true,
+        "mode": "repulse"
       },
       "resize": true
     },
@@ -95,8 +95,8 @@
         "speed": 3
       },
       "repulse": {
-        "distance": 150,
-        "duration": 0.8
+        "distance": 450,
+        "duration": 0.4
       },
       "push": {
         "particles_nb": 8

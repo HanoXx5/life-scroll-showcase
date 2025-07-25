@@ -75,76 +75,34 @@ const Projects = () => {
           </h2>
         </div>
 
-        {/* Marquee Animation mit exaktem CSS */}
+        {/* Marquee Animation ohne Pause */}
         <div className="flex justify-center my-2 mb-4">
-          <div className="content">
-            <div className="marquee">
-              <div className="marquee_blur" aria-hidden="true">
-                <p className="marquee_text">
-                  React | Next.js | Tailwind CSS | TypeScript | Java | Git
+          <div className="content" style={{ overflow: "hidden", width: "100%", maxWidth: "40ch", padding: "1em 1em" }}>
+            <div className="marquee" style={{ position: "relative", width: "100%", height: "2em", fontSize: "2.5em", display: "grid", placeItems: "center" }}>
+              <div className="marquee_blur" aria-hidden="true" style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", backgroundColor: "", filter: "contrast(15)" }}>
+                <p className="marquee_text" style={{ position: "absolute", minWidth: "100%", whiteSpace: "nowrap", filter: "blur(0.07em)" }}>
+                  {Array(3).fill("React | Next.js | Tailwind CSS | TypeScript | Java | Git | Lovable |").join(" ")}
                 </p>
-
               </div>
-              <div className="marquee_clear">
-                <p className="marquee_text">
-                  React | Next.js | Tailwind CSS | TypeScript | Java | Git
+              <div className="marquee_clear" style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center" }}>
+                <p className="marquee_text" style={{ position: "absolute", minWidth: "100%", whiteSpace: "nowrap" }}>
+                  {Array(3).fill("React | Next.js | Tailwind CSS | TypeScript | Java | Git | Lovable |").join(" ")}
                 </p>
               </div>
             </div>
+            <style>
+              {`
+                @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+                .marquee_text {
+                  animation: marquee-continuous 20s linear infinite;
+                }
+                @keyframes marquee-continuous {
+                  0% { transform: translateX(0%); }
+                  100% { transform: translateX(-33.333%); }
+                }
+              `}
+            </style>
           </div>
-          <style>
-            {`
-              @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
-              .content {
-                width: 95%;
-                max-width: 40ch;
-                padding: 1em 1em;
-                font-family: ;
-              }
-              .marquee {
-                position: relative;
-                width: 100%;
-                height: 2em;
-                font-size: 2.5em;
-                display: grid;
-                place-items: center;
-                overflow: hidden;
-              }
-              .marquee_text {
-                position: absolute;
-                min-width: 100%;
-                white-space: nowrap;
-                -webkit-animation: marquee 14s infinite linear;
-                        animation: marquee 14s infinite linear;
-              }
-              @-webkit-keyframes marquee {
-                from { translate: 70%; }
-                to { translate: -70%; }
-              }
-              @keyframes marquee {
-                from { translate: 70%; }
-                to { translate: -70%; }
-              }
-              .marquee_blur {
-                position: absolute;
-                inset: 0;
-                display: grid;
-                place-items: center;
-                background-color: neutral-650;
-                background-image: linear-gradient(to right, neutral, 1rem, transparent 50%), linear-gradient(to left, neural, 1rem, transparent 50%);
-                filter: contrast(15);
-              }
-              .marquee_blur p {
-                filter: blur(0.07em);
-              }
-              .marquee_clear {
-                position: absolute;
-                inset: 0;
-                display: grid;
-                place-items: center;
-              }
-            `}
-          </style>
         </div>
         {/* Featured Projects */}
         <div className="mb-16">

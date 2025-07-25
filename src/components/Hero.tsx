@@ -5,6 +5,76 @@ import "animate.css";
 import { useEffect } from "react";
 import StackIcon from "tech-stack-icons";
 
+const ballStyles = `
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+.hero-balls-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.ball {
+  position: absolute;
+  width: 32vmin;
+  height: 32vmin;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  animation: move linear infinite;
+  opacity: 0.22;
+  filter: blur(22px);
+}
+.ball:nth-child(odd) {
+  background: radial-gradient(circle at 60% 40%, #3b82f6 60%, #6366f1 100%);
+}
+.ball:nth-child(even) {
+  background: radial-gradient(circle at 60% 40%, #6366f1 60%, #3b82f6 100%);
+}
+.ball:nth-child(1) {
+  top: 77%;
+  left: 88%;
+  animation-duration: 40s;
+  animation-delay: -3s;
+  transform-origin: 16vw -2vh;
+}
+.ball:nth-child(2) {
+  top: 42%;
+  left: 2%;
+  animation-duration: 53s;
+  animation-delay: -29s;
+  transform-origin: -19vw 21vh;
+}
+.ball:nth-child(3) {
+  top: 28%;
+  left: 18%;
+  animation-duration: 49s;
+  animation-delay: -8s;
+  transform-origin: -22vw 3vh;
+}
+.ball:nth-child(4) {
+  top: 50%;
+  left: 79%;
+  animation-duration: 26s;
+  animation-delay: -21s;
+  transform-origin: -17vw -6vh;
+}
+.ball:nth-child(5) {
+  top: 46%;
+  left: 15%;
+  animation-duration: 36s;
+  animation-delay: -40s;
+  transform-origin: 4vw 0vh;
+}
+
+
+`;
+
 const Hero = () => {
   useEffect(() => {
     // Particles.js initialisieren
@@ -25,8 +95,15 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-neutral-50 via-white to-neutral-100 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 transition-colors duration-500">
-      {/* Particles.js Container */}
-      <div id="particles-js" className="absolute inset-0 z-0"></div>
+      <style>{ballStyles}</style>
+      {/* Hintergrund-Bälle */}
+      <div className="hero-balls-bg z-0">
+        <div className="ball" />
+        <div className="ball" />
+        <div className="ball" />
+        <div className="ball" />
+        <div className="ball" />
+      </div>
 
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden z-10">
@@ -134,7 +211,7 @@ const Hero = () => {
                 </div>
 
                 {/* Main Profile Card - Large asymmetric placement */}
-                <div className="col-span-3 rounded-3xl row-span-3 col-start-2 row-start-1 bg-white/90 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-4xl p-8 shadow-2xl hover:shadow-xl transition-all duration-500 animate__animated animate__zoomIn animate__delay-1s animate__slow">
+                <div className="col-span-3 rounded-3xl row-span-3 col-start-2 row-start-1 bg-white/90 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-neutral-700/30 rounded-4xl p-8 shadow-2xl hover:shadow-xl transition-all duration-500 animate__animated animate__fadeInDown animate__delay-1s animate__slow">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-6">
                     <div className="relative">
                      <div className="w-58 h-58 rounded-3xl shadow-xl overflow-hidden">

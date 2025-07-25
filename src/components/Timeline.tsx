@@ -115,6 +115,8 @@ const Timeline = () => {
 
   return (
     <section id="timeline-section" className="py-20 bg-gradient-to-br from-neutral-50 to-white dark:from-neutral-900 dark:to-neutral-800 relative overflow-hidden transition-colors duration-500">
+
+
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-64 h-64 bg-accent-purple/5 dark:bg-accent-purple/10 rounded-full blur-3xl"></div>
