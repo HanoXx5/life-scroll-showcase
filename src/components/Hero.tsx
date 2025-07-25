@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
          {/* Left content */}
          <div className="space-y-8 relative ">
-           <div className="bg-gradient-to-br from-white/80 via-gray-50/90 to-blue-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl p-8 shadow-xl animate__animated animate__fadeInDown animate__slow ">
+           <div className="bg-gradient-to-br from-white/80 via-gray-50/90 to-blue-50/80 dark:from-neutral-800/50 dark:via-neutral-900/50 dark:to-neutral-900/50 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl p-8 shadow-xl animate__animated animate__fadeInDown animate__slow ">
              <div className="relative z-10 ">
                <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
                  Hi, ich bin{" "}
@@ -126,7 +126,7 @@ const Hero = () => {
               <div className="grid grid-cols-6 grid-rows-5 gap-4 w-full h-[600px]">
 
                 {/* Small decorative element - top left */}
-                <div className="col-span-1 row-span-1 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInLeft animate__delay-2s animate__slow flex items-center justify-center" >
+                <div className="col-span-1 row-span-1 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInDownBig animate__delay-2s animate__slow flex items-center justify-center" >
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
 
@@ -206,7 +206,7 @@ const Hero = () => {
                 </div>
 
                 {/* Energy/Lightning decoration */}
-                <div className="col-span-1 row-span-1 col-start-1 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInLeft animate__delay-3s">
+                <div className="col-span-1 row-span-1 col-start-1 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInDown animate__delay-1s animate__slow">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
                     <Zap className="w-6 h-6 text-white" />
                   </div>

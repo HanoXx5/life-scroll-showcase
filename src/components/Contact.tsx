@@ -39,7 +39,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Lass uns <span className="bg-gradient-text bg-clip-text text-transparent">zusammenarbeiten</span>
           </h2>
-          <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
             Hast du ein spannendes Projekt im Kopf? Ich würde gerne davon hören und dir dabei helfen, es zum Leben zu erwecken.
           </p>
         </div>
@@ -48,9 +48,9 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-up">
             <div>
-              <h3 className="text-2xl font-bold text-neutral-800 mb-6">Kontaktinformationen</h3>
-              <p className="text-neutral-600 mb-8 leading-relaxed">
-                Ich bin immer offen für neue Herausforderungen und spannende Projekte. 
+              <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-300 mb-6">Kontaktinformationen</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-8 leading-relaxed">
+                Ich bin immer offen für neue Herausforderungen und spannende Projekte.
                 Egal ob du eine Idee für eine Webanwendung hast oder Unterstützung bei einem 
                 bestehenden Projekt benötigst - lass uns darüber sprechen!
               </p>
@@ -63,8 +63,8 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-neutral-800">E-Mail</h4>
-                    <p className="text-neutral-600">kontakt@deinename.de</p>
+                    <h4 className="font-semibold text-neutral-800 dark:text-neutral-300">E-Mail</h4>
+                    <p className="text-neutral-600 dark:text-neutral-300">kontakt@deinename.de</p>
                   </div>
                 </div>
               </Card>
@@ -75,8 +75,8 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-neutral-800">Telefon</h4>
-                    <p className="text-neutral-600">+49 123 456 7890</p>
+                    <h4 className="font-semibold text-neutral-800 dark:text-neutral-300">Telefon</h4>
+                    <p className="text-neutral-600 dark:text-neutral-300">+49 123 456 7890</p>
                   </div>
                 </div>
               </Card>
@@ -87,8 +87,8 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-neutral-800">Standort</h4>
-                    <p className="text-neutral-600">Berlin, Deutschland</p>
+                    <h4 className="font-semibold text-neutral-800 dark:text-neutral-300">Standort</h4>
+                    <p className="text-neutral-600 dark:text-neutral-300">Berlin, Deutschland</p>
                   </div>
                 </div>
               </Card>
@@ -96,7 +96,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="font-semibold text-neutral-800 mb-4">Folge mir</h4>
+              <h4 className="font-semibold text-neutral-800 dark:text-neutral-300 mb-4">Folge mir</h4>
               <div className="flex gap-4">
                 <Button variant="outline" size="lg" className="hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:border-primary-blue transition-all duration-300">
                   <Github className="w-5 h-5" />
@@ -114,12 +114,12 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <Card className="p-8 bg-gradient-to-br from-white/90 via-blue-50/80 to-purple-50/80 dark:from-gray-800/90 dark:via-gray-700/90 dark:to-blue-900/90 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-3xl shadow-xl">
-              <h3 className="text-2xl font-bold text-neutral-800 mb-6">Schreib mir eine Nachricht</h3>
-              
+              <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-300 mb-6">Schreib mir eine Nachricht</h3>
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
                       Name *
                     </label>
                     <Input
@@ -129,12 +129,12 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="bg-white/50 border-neutral-200 focus:border-primary-blue transition-all duration-300"
+                      className="bg-white/50 border-neutral-200 focus:border-primary-blue transition-all duration-300 dark:bg-neutral-900/60 dark:text-neutral-300"
                       placeholder="Dein Name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
                       E-Mail *
                     </label>
                     <Input
@@ -144,14 +144,14 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="bg-white/50 border-neutral-200 focus:border-primary-blue transition-all duration-300"
+                      className="bg-white/50 border-neutral-200 focus:border-primary-blue transition-all duration-300 dark:bg-neutral-900/60 dark:text-neutral-300"
                       placeholder="deine@email.de"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-neutral-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
                     Betreff *
                   </label>
                   <Input
@@ -161,13 +161,13 @@ const Contact = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="bg-white/50 border-neutral-200 focus:border-primary-blue transition-all duration-300"
+                    className="bg-white/50 border-neutral-200 focus:border-primary-blue transition-all duration-300 dark:bg-neutral-900/60 dark:text-neutral-300"
                     placeholder="Worum geht es?"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
                     Nachricht *
                   </label>
                   <Textarea
@@ -177,7 +177,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className="bg-white/50 border-neutral-200 focus:border-primary-blue transition-all duration-300 resize-none"
+                    className="bg-white/50 border-neutral-200 focus:border-primary-blue transition-all duration-300 resize-none dark:bg-neutral-900/60 dark:text-neutral-300"
                     placeholder="Erzähl mir von deinem Projekt..."
                   />
                 </div>
@@ -193,7 +193,7 @@ const Contact = () => {
               </form>
 
               <div className="mt-6 text-center">
-                <p className="text-sm text-neutral-500">
+                <p className="text-sm text-neutral-500 dark:text-neutral-300">
                   Ich antworte normalerweise innerhalb von 24 Stunden
                 </p>
               </div>
