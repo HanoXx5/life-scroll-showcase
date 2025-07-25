@@ -5,6 +5,8 @@ import { ExternalLink, Github, Eye } from "lucide-react";
 import ecommerceImage from "@/assets/project-ecommerce.jpg";
 import taskappImage from "@/assets/project-taskapp.jpg";
 import portfolioImage from "@/assets/project-portfolio.jpg";
+import StackIcon from "tech-stack-icons";
+
 
 interface Project {
   id: string;
@@ -59,7 +61,7 @@ const Projects = () => {
   const otherProjects = projects.filter(project => !project.featured);
 
   return (
-    <section id="projects-section" className="py-20 bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 relative overflow-hidden transition-colors duration-500">
+    <section id="projects-section" className="py-20 bg-neutral-650 dark:bg-neutral-950 relative overflow-hidden transition-colors duration-500">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-32 right-10 w-72 h-72 bg-accent-teal/10 dark:bg-accent-teal/10 rounded-full blur-3xl"></div>
@@ -67,18 +69,85 @@ const Projects = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Meine <span className="bg-gradient-text bg-clip-text text-transparent">Projekte</span>
+        <div className="text-center mb-2 animate-fade-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            Meine <span className="bg-gradient-text bg-clip-text text-transparent">Projekte</span> mit
           </h2>
-          <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-            Eine Auswahl meiner neuesten Arbeiten und Projekte, die meine Fähigkeiten und Leidenschaft für Entwicklung zeigen
-          </p>
         </div>
 
+        {/* Marquee Animation mit exaktem CSS */}
+        <div className="flex justify-center my-2 mb-4">
+          <div className="content">
+            <div className="marquee">
+              <div className="marquee_blur" aria-hidden="true">
+                <p className="marquee_text">
+                  React | Next.js | Tailwind CSS | TypeScript | Java | Git
+                </p>
+
+              </div>
+              <div className="marquee_clear">
+                <p className="marquee_text">
+                  React | Next.js | Tailwind CSS | TypeScript | Java | Git
+                </p>
+              </div>
+            </div>
+          </div>
+          <style>
+            {`
+              @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+              .content {
+                width: 95%;
+                max-width: 40ch;
+                padding: 1em 1em;
+                font-family: ;
+              }
+              .marquee {
+                position: relative;
+                width: 100%;
+                height: 2em;
+                font-size: 2.5em;
+                display: grid;
+                place-items: center;
+                overflow: hidden;
+              }
+              .marquee_text {
+                position: absolute;
+                min-width: 100%;
+                white-space: nowrap;
+                -webkit-animation: marquee 14s infinite linear;
+                        animation: marquee 14s infinite linear;
+              }
+              @-webkit-keyframes marquee {
+                from { translate: 70%; }
+                to { translate: -70%; }
+              }
+              @keyframes marquee {
+                from { translate: 70%; }
+                to { translate: -70%; }
+              }
+              .marquee_blur {
+                position: absolute;
+                inset: 0;
+                display: grid;
+                place-items: center;
+                background-color: neutral-650;
+                background-image: linear-gradient(to right, neutral, 1rem, transparent 50%), linear-gradient(to left, neural, 1rem, transparent 50%);
+                filter: contrast(15);
+              }
+              .marquee_blur p {
+                filter: blur(0.07em);
+              }
+              .marquee_clear {
+                position: absolute;
+                inset: 0;
+                display: grid;
+                place-items: center;
+              }
+            `}
+          </style>
+        </div>
         {/* Featured Projects */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-300 mb-8 text-center">Featured Projekte</h3>
           {/* Mobile Ansicht */}
           <div className="flex flex-col gap-8 md:hidden">
             {featuredProjects.map((project) => (
@@ -102,6 +171,7 @@ const Projects = () => {
                         variant="secondary"
                         className="bg-gradient-primary/10 text-primary-blue border-primary-blue/20"
                       >
+                        <StackIcon name={tech} className="w-4 h-4 mr-1 inline-block" />
                         {tech}
                       </Badge>
                     ))}
@@ -163,11 +233,12 @@ const Projects = () => {
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, idx) => (
-                      <Badge 
+                      <Badge
                         key={idx}
                         variant="secondary"
                         className="bg-gradient-primary/10 text-primary-blue border-primary-blue/20 hover:bg-gradient-primary/20 transition-all duration-300"
                       >
+                        <StackIcon name={tech} className="w-4 h-4 mr-1 inline-block" />
                         {tech}
                       </Badge>
                     ))}
