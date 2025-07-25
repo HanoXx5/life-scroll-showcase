@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ExternalLink, Heart, Coffee, Music, Camera, MapPin, Briefcase, GraduationCap, Sparkles, Code, Zap, ArrowRight, FolderOpen } from "lucide-react";
 import "animate.css";
 import { useEffect } from "react";
+import StackIcon from "tech-stack-icons";
 
 const Hero = () => {
   useEffect(() => {
@@ -127,7 +128,9 @@ const Hero = () => {
 
                 {/* Small decorative element - top left */}
                 <div className="col-span-1 row-span-1 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInDownBig animate__delay-2s animate__slow flex items-center justify-center" >
-                  <Sparkles className="w-6 h-6 text-white" />
+                  <div style={{ width: 80, height: 80 }}>
+                        <StackIcon name="nextjs" />
+                      </div>
                 </div>
 
                 {/* Main Profile Card - Large asymmetric placement */}
@@ -170,7 +173,11 @@ const Hero = () => {
 
                 {/* Code decoration - far right */}
                 <div className="col-span-1 row-span-1 col-start-6 row-start-2 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInRightBig animate__delay-2s animate__slow">
-                  <Coffee className="w-6 h-6 text-white" />
+                  <a href="https://github.com/HanoXx5" target="_blank" rel="noopener noreferrer">
+                  <div style={{ width: 70, height: 70 }}>
+                  <StackIcon name="github" variant="dark"/>
+                  </div>
+                    </a>
                 </div>
 
                 {/* University Card - repositioned */}
@@ -206,9 +213,9 @@ const Hero = () => {
                 </div>
 
                 {/* Energy/Lightning decoration */}
-                <div className="col-span-1 row-span-1 col-start-1 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInDown animate__delay-1s animate__slow">
+                <div className="col-span-1 row-span-1 col-start-1 row-start-3 bg-gradient-to-br from-gray-100/50 to-gray-200/50 dark:from-neutral-800/50 dark:to-neutral-900/50 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInDown animate__delay-1s animate__slow">
                   <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
-                    <Zap className="w-6 h-6 text-white" />
+                      <StackIcon name="react" variant="light"/>
                   </div>
                 </div>
 
