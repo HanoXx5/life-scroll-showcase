@@ -206,7 +206,7 @@ const Hero = () => {
                 {/* Small decorative element - top left */}
                 <div className="col-span-1 row-span-1 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInDownBig animate__delay-2s animate__slow flex items-center justify-center" >
                   <div style={{ width: 80, height: 80 }}>
-                        <StackIcon name="nextjs" />
+                        <StackIcon name="java" />
                       </div>
                 </div>
 
