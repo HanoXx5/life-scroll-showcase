@@ -19,13 +19,9 @@ const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold mb-3">
                 <span className="bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent">
-                  Dein Name
+                  Sebastian Zscherneck
                 </span>
               </h3>
-              <p className="text-neutral-400 leading-relaxed">
-                Leidenschaftlicher Full-Stack Developer mit dem Fokus auf moderne, 
-                benutzerfreundliche Webanwendungen und innovative Lösungen.
-              </p>
             </div>
             
             <div className="flex gap-3">
@@ -35,55 +31,10 @@ const Footer = () => {
               <Button variant="outline" size="sm" className="border-primary-blue text-neutral-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:border-primary-blue transition-all duration-300">
                 <Linkedin className="w-4 h-4" />
               </Button>
-              <Button variant="outline" size="sm" className="border-accent-teal text-neutral-300 hover:bg-gradient-to-r hover:from-teal-400 hover:to-cyan-500 hover:border-accent-teal transition-all duration-300">
-                <Twitter className="w-4 h-4" />
-              </Button>
               <Button variant="outline" size="sm" className="border-accent-purple text-neutral-300 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:border-accent-purple transition-all duration-300">
                 <Mail className="w-4 h-4" />
               </Button>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
-            <nav className="space-y-3">
-              <a href="#hero" className="block text-neutral-400 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">
-                Über mich
-              </a>
-              <a href="#timeline" className="block text-neutral-400 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">
-                Werdegang
-              </a>
-              <a href="#projects" className="block text-neutral-400 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">
-                Projekte
-              </a>
-              <a href="#contact" className="block text-neutral-400 hover:text-white transition-colors duration-300 hover:translate-x-2 transform">
-                Kontakt
-              </a>
-            </nav>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
-            <ul className="space-y-3 text-neutral-400">
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary-blue rounded-full"></div>
-                Web Development
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent-teal rounded-full"></div>
-                Frontend Development
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent-purple rounded-full"></div>
-                Backend Development
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-success-green rounded-full"></div>
-                UI/UX Consulting
-              </li>
-            </ul>
           </div>
         </div>
 
@@ -91,9 +42,7 @@ const Footer = () => {
         <div className="border-t border-neutral-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-neutral-400">
-              <span>© {currentYear} Dein Name. Gemacht mit</span>
-              <Heart className="w-4 h-4 text-red-400 animate-pulse" />
-              <span>in Berlin</span>
+              <span>© {currentYear} Sebastian Zscherneck</span>
             </div>
             
             <div className="flex items-center gap-6 text-sm text-neutral-400">

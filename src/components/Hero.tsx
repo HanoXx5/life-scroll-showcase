@@ -235,21 +235,10 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Tall Card - right side */}
-                <div className="col-span-1 row-span-2 col-start-5 row-start-2 bg-gradient-to-b from-red-400/20 to-pink-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__slower">
-                  <div className="flex flex-col items-center justify-center h-full text-center space-y-4">
-                    <div>
-                    </div>
-                    <div className="flex flex-col space-y-2">
-                      <div className="w-8 h-1 bg-red-400 rounded-full"></div>
-                      <div className="w-6 h-1 bg-pink-400 rounded-full"></div>
-                      <div className="w-10 h-1 bg-red-300 rounded-full"></div>
-                    </div>
-                  </div>
-                </div>
+
 
                 {/* Code decoration - far right */}
-                <div className="col-span-1 row-span-1 col-start-6 row-start-2 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInRightBig animate__delay-2s animate__slow">
+                <div className="col-span-1 row-span-1 col-start-5 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInRightBig animate__delay-2s animate__slow">
                   <a href="https://github.com/HanoXx5" target="_blank" rel="noopener noreferrer">
                   <div style={{ width: 70, height: 70 }}>
                   <StackIcon name="github" variant="dark"/>
@@ -296,26 +285,20 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Math Tutoring - smaller, repositioned */}
+                {/* Math Tutoring - größer, rot, col-span-2, row-span-2 */}
                 <a
                   href="https://nachhilfe-langen-egelsbach.de/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="col-span-2 row-span-1 col-start-5 row-start-1"
+                  className="col-start-5 row-start-1 col-span-2 row-span-2"
                 >
-                <div className="col-span-1 row-span-1 col-start-4 row-start-5 bg-gradient-to-br from-green-400/20 to-emerald-500/20 backdrop-blur-xl border border-white/20 dark:border-neutral-700/30 rounded-3xl p-4 shadow-xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__delay-2s" >
-                  <div className="flex flex-col items-center justify-center h-full text-center space-y-2">
-
-                                      <div>
-                                        <div className="font-bold text-neutral-800 dark:text-neutral-200 text-xs">Mathe Nachhilfe</div>
-                                      </div>
-                                      <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
-                                                                              <ExternalLink className="text-white"></ExternalLink>
-                                                                            </div>
-                                    </div>
-
-                </div>
-                   </a>
+                  <div className="bg-gradient-to-br from-red-500/30 to-pink-600/30 backdrop-blur-xl border border-white/20 dark:border-red-700/30 rounded-3xl p-6 shadow-2xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__delay-2s flex flex-col items-center justify-center h-full text-center space-y-4">
+                    <div className="font-bold text-neutral-800 dark:text-neutral-200 text-lg">Mathe Nachhilfe</div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg">
+                      <ExternalLink className="text-white w-9 h-9" />
+                    </div>
+                  </div>
+                </a>
 
                 {/* Small code decoration */}
                 <div className="col-span-1 row-span-2 col-start-1 row-start-4 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 animate__animated animate__fadeInUpBig animate__delay-1s animate__slow flex items-center justify-center">

@@ -143,14 +143,7 @@ const Projects = () => {
                         </Button>
                       </a>
                     )}
-                    {project.githubUrl && (
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Button variant="outline" size="sm" className="hover:bg-neutral-800/10 hover:border-neutral-800 transition-all duration-300">
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </Button>
-                      </a>
-                    )}
+
                   </div>
                 </div>
               </Card>

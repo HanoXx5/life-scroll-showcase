@@ -37,7 +37,7 @@ const Contact = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Lass uns <span className="bg-gradient-text bg-clip-text text-transparent">zusammenarbeiten</span>
+            Let's get in <span className="bg-gradient-text bg-clip-text text-transparent">touch</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
             Hast du ein spannendes Projekt im Kopf? Ich würde gerne davon hören und dir dabei helfen, es zum Leben zu erwecken.
@@ -49,11 +49,7 @@ const Contact = () => {
           <div className="space-y-8 animate-slide-up">
             <div>
               <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-300 mb-6">Kontaktinformationen</h3>
-              <p className="text-neutral-600 dark:text-neutral-300 mb-8 leading-relaxed">
-                Ich bin immer offen für neue Herausforderungen und spannende Projekte.
-                Egal ob du eine Idee für eine Webanwendung hast oder Unterstützung bei einem 
-                bestehenden Projekt benötigst - lass uns darüber sprechen!
-              </p>
+
             </div>
 
             <div className="space-y-6">
@@ -64,7 +60,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-neutral-800 dark:text-neutral-300">E-Mail</h4>
-                    <p className="text-neutral-600 dark:text-neutral-300">kontakt@deinename.de</p>
+                    <p className="text-neutral-600 dark:text-neutral-300">s.zscherneck@web.de</p>
                   </div>
                 </div>
               </Card>
@@ -76,7 +72,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-neutral-800 dark:text-neutral-300">Telefon</h4>
-                    <p className="text-neutral-600 dark:text-neutral-300">+49 123 456 7890</p>
+                    <p className="text-neutral-600 dark:text-neutral-300">+49 162 1992865</p>
                   </div>
                 </div>
               </Card>
@@ -88,7 +84,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-neutral-800 dark:text-neutral-300">Standort</h4>
-                    <p className="text-neutral-600 dark:text-neutral-300">Berlin, Deutschland</p>
+                    <p className="text-neutral-600 dark:text-neutral-300">Egelsbach, Deutschland</p>
                   </div>
                 </div>
               </Card>
@@ -98,15 +94,16 @@ const Contact = () => {
             <div>
               <h4 className="font-semibold text-neutral-800 dark:text-neutral-300 mb-4">Folge mir</h4>
               <div className="flex gap-4">
+              <a href="https://github.com/HanoXx5" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg" className="hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:border-primary-blue transition-all duration-300">
                   <Github className="w-5 h-5" />
                 </Button>
+                </a>
+                <a  href="https://www.linkedin.com/in/sebastian-zscherneck-717a44297/" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg" className="hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:border-primary-blue transition-all duration-300">
                   <Linkedin className="w-5 h-5" />
                 </Button>
-                <Button variant="outline" size="lg" className="hover:bg-gradient-to-r hover:from-teal-400 hover:to-cyan-500 hover:border-accent-teal transition-all duration-300">
-                  <Twitter className="w-5 h-5" />
-                </Button>
+                </a>
               </div>
             </div>
           </div>
