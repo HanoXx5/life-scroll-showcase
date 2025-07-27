@@ -22,12 +22,9 @@ const timelineData: TimelineItem[] = [
     location: 'Frankfurt, Deutschland',
     period: '08/2025 - 10/2025',
     description: [
-      'Entwicklung und Wartung von React-basierten Webanwendungen',
-      'Implementierung von RESTful APIs mit Node.js und Express',
-      'Mentoring von Junior-Entwicklern und Code-Reviews',
-      'Verbesserung der Performance um 40% durch Optimierungen'
+
     ],
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS'],
+    technologies: ['Management', 'Startup'],
     type: 'work'
   },
   {

@@ -45,17 +45,7 @@ const Footer = () => {
               <span>© {currentYear} Sebastian Zscherneck</span>
             </div>
             
-            <div className="flex items-center gap-6 text-sm text-neutral-400">
-              <a href="#" className="hover:text-white transition-colors duration-300">
-                Datenschutz
-              </a>
-              <a href="#" className="hover:text-white transition-colors duration-300">
-                Impressum
-              </a>
-              <a href="#" className="hover:text-white transition-colors duration-300">
-                AGB
-              </a>
-            </div>
+
           </div>
         </div>
       </div>

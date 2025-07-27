@@ -2,9 +2,6 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Eye } from "lucide-react";
-import ecommerceImage from "@/assets/project-ecommerce.jpg";
-import taskappImage from "@/assets/project-taskapp.jpg";
-import portfolioImage from "@/assets/project-portfolio.jpg";
 import StackIcon from "tech-stack-icons";
 
 
@@ -24,7 +21,7 @@ const projects: Project[] = [
   {
     id: '1',
     title: 'Website Rechtsanwalt',
-    description: 'Eine vollständige E-Commerce-Lösung mit modernem Design, Zahlungsintegration und Admin-Dashboard. Unterstützt mehrere Zahlungsmethoden und bietet ein nahtloses Einkaufserlebnis.',
+    description: 'Eine vollständige responsive Website mit Kontaktformular für eine Rechtsanwaltskanzlei, die auf Next.js und Tailwind CSS basiert. Sie bietet eine ansprechende Benutzeroberfläche und ist für Suchmaschinen optimiert.',
     image: "/src/assets/Screenshot 2025-07-23 154525.png",
     technologies: ['React', 'Next.js', 'Tailwind CSS',"TypeScript"],
     liveUrl: 'https://www.zscherneck-rechtsanwalt.de/',
@@ -34,26 +31,16 @@ const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'Task Management App',
-    description: 'Eine intuitive Projektmanagement-Anwendung mit Kanban-Boards, Echtzeit-Kollaboration und erweiterten Reporting-Features für Teams jeder Größe.',
-    image: taskappImage,
-    technologies: ['Vue.js', 'Node.js', 'Socket.io', 'MongoDB', 'Docker'],
+    title: 'Website Nachhilfe',
+    description: 'Eine Landingpage für eine Nachhilfelandingpage mit ansprechendem Design Optimiert für SEO und schnelle Ladezeiten.',
+    image: "src/assets/Screenshot 2025-07-27 235316.jpg",
+    technologies: ['React', 'Next.js', 'Tailwind CSS',"TypeScript"],
     liveUrl: '#',
     githubUrl: '#',
-    category: 'SaaS',
+    category: 'Website',
     featured: true
   },
-  {
-    id: '3',
-    title: 'Portfolio Website',
-    description: 'Eine moderne, responsive Portfolio-Website mit animierten Übergängen und optimierter Performance. Showcase für kreative Arbeiten und berufliche Erfahrungen.',
-    image: portfolioImage,
-    technologies: ['React', 'TypeScript', 'Framer Motion', 'Sanity CMS'],
-    liveUrl: '#',
-    githubUrl: '#',
-    category: 'Portfolio',
-    featured: false
-  }
+
 ];
 
 const Projects = () => {

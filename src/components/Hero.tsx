@@ -172,9 +172,9 @@ const Hero = () => {
           <div className="flex justify-center relative">
             {/* Mobile Ansicht */}
             <div className="w-full flex flex-col items-center gap-6 lg:hidden">
-              <div className="w-64 h-64 rounded-3xl shadow-xl overflow-hidden">
+              <div className="bg-white/90 w-64 h-64 rounded-3xl shadow-xl overflow-hidden">
                 <img
-                  src="/src/assets/profile-image.jpg"
+                  src="src/assets/IMG_0437 (2)-Photoroom.png"
                   alt="Sebastian Zscherneck"
                   className="w-full h-full object-cover"
                 />
@@ -216,7 +216,7 @@ const Hero = () => {
                     <div className="relative">
                      <div className="w-58 h-58 rounded-3xl shadow-xl overflow-hidden">
                              <img
-                               src="/src/assets/profile-image.jpg"
+                               src="src/assets/IMG_0437 (2)-Photoroom.png"
                                alt="Sebastian Zscherneck"
                                className="w-full h-full object-cover"
                              />
@@ -239,7 +239,7 @@ const Hero = () => {
 
                 {/* Code decoration - far right */}
                 <div className="col-span-1 row-span-1 col-start-5 row-start-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg hover:scale-110 transition-all duration-500 flex items-center justify-center animate__animated animate__fadeInRightBig animate__delay-2s animate__slow">
-                  <a href="https://github.com/HanoXx5" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/HanoXx5" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full hover:scale-110 transition-transform duration-300 cursor-pointer ">
                   <div style={{ width: 70, height: 70 }}>
                   <StackIcon name="github" variant="dark"/>
                   </div>
@@ -265,16 +265,16 @@ const Hero = () => {
                 </div>
 
                 {/* LinkedIn Kachel */}
-                <div className="col-span-1 row-span-1 col-start-2 row-start-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg animate__animated animate__fadeInUpBig animate__delay-2s animate__slow">
-                  <a href="https://www.linkedin.com/in/sebastian-zscherneck-717a44297" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="w-6 h-6 text-white" />
+                <div className="col-span-1 row-span-1 col-start-2 row-start-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center animate__animated animate__fadeInUpBig animate__delay-2s animate__slow">
+                  <a href="https://www.linkedin.com/in/sebastian-zscherneck-717a44297" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full hover:scale-110 transition-transform duration-300 cursor-pointer">
+                    <Linkedin className="w-10 h-10 text-white" />
                   </a>
                 </div>
 
                 {/* Mail Kachel */}
-                <div className="col-span-1 row-span-1 col-start-3 row-start-5 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg animate__animated animate__fadeInUpBig animate__delay-1s animate__slower">
-                  <a href="mailto:s.zscherneck@web.de" target="_blank" rel="noopener noreferrer">
-                    <Mail className="w-6 h-6 text-white" />
+                <div className="col-span-1 row-span-1 col-start-3 row-start-5 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center animate__animated animate__fadeInUpBig animate__delay-1s animate__slower">
+                  <a href="mailto:s.zscherneck@web.de" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full hover:scale-110 transition-transform duration-300 cursor-pointer">
+                    <Mail className="w-10 h-10 text-white" />
                   </a>
                 </div>
 
@@ -294,7 +294,7 @@ const Hero = () => {
                 >
                   <div className="bg-gradient-to-br from-red-500/30 to-pink-600/30 backdrop-blur-xl border border-white/20 dark:border-red-700/30 rounded-3xl p-6 shadow-2xl hover:scale-105 transition-all duration-500 animate__animated animate__fadeInDown animate__delay-2s flex flex-col items-center justify-center h-full text-center space-y-4">
                     <div className="font-bold text-neutral-800 dark:text-neutral-200 text-lg">Mathe Nachhilfe</div>
-                    <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg">
+                    <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg hover:scale-105 transition-all duration-300">
                       <ExternalLink className="text-white w-9 h-9" />
                     </div>
                   </div>
