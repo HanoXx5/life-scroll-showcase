@@ -17,7 +17,7 @@ interface TimelineItem {
 const timelineData: TimelineItem[] = [
   {
     id: '1',
-    title: 'Buisness Devoplement Internship',
+    title: 'Business Development Internship',
     company: 'Ecommerce Startup Störtebekker',
     location: 'Frankfurt, Deutschland',
     period: '08/2025 - 10/2025',
@@ -28,7 +28,19 @@ const timelineData: TimelineItem[] = [
     type: 'work'
   },
   {
-    id: '2',
+      id: '2',
+      title: 'Tutor Mathematik',
+      company: 'Studienkreis Nachhilfe und Selbständigkeit',
+      location: 'Egelsbach, Deutschland',
+      period: '03/2024 - heute',
+      description: [
+          'Unterstützung von Schülern in Mathematik',
+          '15+ Schüler betreut'],
+      technologies: [],
+      type: 'work'
+    },
+  {
+    id: '3',
     title: 'B.Sc. Wirtschaftsinformatik',
     company: 'Technische Universität Darmstadt',
     location: 'Darmstadt, Deutschland',
@@ -43,7 +55,7 @@ const timelineData: TimelineItem[] = [
     type: 'education'
   },
   {
-    id: '3',
+    id: '4',
     title: 'Abitur',
     company: 'Weibelfeldschule',
     location: 'Dreieich, Deutschland',

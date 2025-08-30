@@ -22,7 +22,7 @@ const projects: Project[] = [
     id: '1',
     title: 'Website Rechtsanwalt',
     description: 'Eine vollständige responsive Website mit Kontaktformular für eine Rechtsanwaltskanzlei, die auf Next.js und Tailwind CSS basiert. Sie bietet eine ansprechende Benutzeroberfläche und ist für Suchmaschinen optimiert.',
-    image: "/src/assets/Screenshot 2025-07-23 154525.png",
+    image: "/assets/Screenshot 2025-07-23 154525.png",
     technologies: ['React', 'Next.js', 'Tailwind CSS',"TypeScript"],
     liveUrl: 'https://www.zscherneck-rechtsanwalt.de/',
     githubUrl: '#',
@@ -33,9 +33,9 @@ const projects: Project[] = [
     id: '2',
     title: 'Website Nachhilfe',
     description: 'Eine Landingpage für eine Nachhilfelandingpage mit ansprechendem Design Optimiert für SEO und schnelle Ladezeiten.',
-    image: "src/assets/Screenshot 2025-07-27 235316.jpg",
+    image: "/assets/Screenshot 2025-07-27 235316.jpg",
     technologies: ['React', 'Next.js', 'Tailwind CSS',"TypeScript"],
-    liveUrl: '#',
+    liveUrl: 'https://nachhilfe-langen-egelsbach.de/',
     githubUrl: '#',
     category: 'Website',
     featured: true
@@ -66,11 +66,7 @@ const Projects = () => {
         <div className="flex justify-center my-2 mb-4">
           <div className="content" style={{ overflow: "hidden", width: "100%", maxWidth: "40ch", padding: "1em 1em" }}>
             <div className="marquee" style={{ position: "relative", width: "100%", height: "2em", fontSize: "2.5em", display: "grid", placeItems: "center" }}>
-              <div className="marquee_blur" aria-hidden="true" style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", backgroundColor: "", filter: "contrast(15)" }}>
-                <p className="marquee_text" style={{ position: "absolute", minWidth: "100%", whiteSpace: "nowrap", filter: "blur(0.07em)" }}>
-                  {Array(3).fill("React | Next.js | Tailwind CSS | TypeScript | Java | Git | Lovable |").join(" ")}
-                </p>
-              </div>
+
               <div className="marquee_clear" style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center" }}>
                 <p className="marquee_text" style={{ position: "absolute", minWidth: "100%", whiteSpace: "nowrap" }}>
                   {Array(3).fill("React | Next.js | Tailwind CSS | TypeScript | Java | Git | Lovable |").join(" ")}

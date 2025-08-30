@@ -174,7 +174,7 @@ const Hero = () => {
             <div className="w-full flex flex-col items-center gap-6 lg:hidden">
               <div className="bg-white/90 w-64 h-64 rounded-3xl shadow-xl overflow-hidden">
                 <img
-                  src="src/assets/IMG_0437 (2)-Photoroom.png"
+                  src="/assets/IMG_0437 (2)-Photoroom.png"
                   alt="Sebastian Zscherneck"
                   className="w-full h-full object-cover"
                 />
@@ -216,7 +216,7 @@ const Hero = () => {
                     <div className="relative">
                      <div className="w-58 h-58 rounded-3xl shadow-xl overflow-hidden">
                              <img
-                               src="src/assets/IMG_0437 (2)-Photoroom.png"
+                               src="/assets/IMG_0437 (2)-Photoroom.png"
                                alt="Sebastian Zscherneck"
                                className="w-full h-full object-cover"
                              />
