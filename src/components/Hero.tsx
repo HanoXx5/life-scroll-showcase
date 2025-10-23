@@ -4,6 +4,7 @@ import { Github, Linkedin, Mail, ExternalLink, Heart, Coffee, Music, Camera, Map
 import "animate.css";
 import { useEffect } from "react";
 import StackIcon from "tech-stack-icons";
+import TiltedCard from './TiltedCard';
 
 const ballStyles = `
 @keyframes move {
@@ -187,7 +188,7 @@ const Hero = () => {
                 <div className="flex gap-4 mt-2">
                   <a href="https://www.linkedin.com/in/sebastian-zscherneck-717a44297" target="_blank" rel="noopener noreferrer">
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                      <Linkedin className="w-5 h-5 text-white" />
+                        <Linkedin className="w-5 h-5 text-white" />
                     </div>
                   </a>
                   <a href="mailto:s.zscherneck@web.de" target="_blank" rel="noopener noreferrer">
