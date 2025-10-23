@@ -4,7 +4,8 @@ import { Github, Linkedin, Mail, ExternalLink, Heart, Coffee, Music, Camera, Map
 import "animate.css";
 import { useEffect } from "react";
 import StackIcon from "tech-stack-icons";
-import TiltedCard from '/ui/TiltedCard';
+import TiltedCard from '@/components/ui/TiltedCard';
+import FluidGlass from '@/components/ui/FluidGlass';
 
 const ballStyles = `
 @keyframes move {
@@ -268,25 +269,7 @@ const Hero = () => {
                 {/* LinkedIn Kachel */}
                 <div className="col-span-1 row-span-1 col-start-2 row-start-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center animate__animated animate__fadeInUpBig animate__delay-2s animate__slow">
                   <a href="https://www.linkedin.com/in/sebastian-zscherneck-717a44297" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full hover:scale-110 transition-transform duration-300 cursor-pointer">
-                    <TiltedCard
-                      imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-                      altText="Kendrick Lamar - GNX Album Cover"
-                      captionText="Kendrick Lamar - GNX"
-                      containerHeight="300px"
-                      containerWidth="300px"
-                      imageHeight="300px"
-                      imageWidth="300px"
-                      rotateAmplitude={12}
-                      scaleOnHover={1.2}
-                      showMobileWarning={false}
-                      showTooltip={true}
-                      displayOverlayContent={true}
-                      overlayContent={
-                        <p className="tilted-card-demo-text">
-                          Kendrick Lamar - GNX
-                        </p>
-                      }
-                    />
+                    <Linkedin className="w-10 h-10 text-white" />
                   </a>
                 </div>
 
@@ -343,6 +326,22 @@ const Hero = () => {
         </div>
         <br></br>
         <br></br>
+      </div>
+
+      {/* FluidGlass Effekt am unteren Rand der Hero Section */}
+      <div style={{ height: '600px', position: 'relative', zIndex: 30 }}>
+        <FluidGlass
+          mode="lens"
+          lensProps={{
+            scale: 0.25,
+            ior: 1.15,
+            thickness: 5,
+            chromaticAberration: 0.1,
+            anisotropy: 0.01
+          }}
+          barProps={{}}
+          cubeProps={{}}
+        />
       </div>
     </section>
   );
